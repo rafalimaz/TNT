@@ -1,0 +1,17 @@
+* Descrição: 
+
+* Método: POST ou GET
+
+* URL: {code} //colocar host apontando para o endereço de release {code} 
+
+* Parâmetros: {code} //nome, tipo, tamanho máximo, e descrição {code} 
+
+* Exemplo de requisição: {code} //colocar um exemplo simples {code} 
+
+* Resposta {code} //nome, tipo, valores possíveis, descrição {code} 
+
+* Exemplo de resposta: {code} //um exemplo simples {code} 
+
+* Critérios de aceitação: 
+  ## Critério 1 //cenário de erro, mensagem de erro, cenários de sucesso, mensagem de successo, validar todos os cenários
+  ## Critério 2

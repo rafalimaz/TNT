@@ -1,0 +1,36 @@
+{
+  "name": "Tools N' Tools",
+  "short_name": "TNT",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "options_page": "options/index.html",
+  "description" : "Some tools to help development environment of Tools Team",
+  "icons": { "16": "resources/img/icons/16x16.png", "38": "resources/img/icons/38x38.png",
+  "48": "resources/img/icons/48x48.png", "128": "resources/img/icons/128x128.png" },
+
+  "browser_action": {
+    "default_icon": "resources/img/icons/icon.png",
+    "default_title": "TNT",
+    "default_popup": "main.html"
+  },
+
+  "background": {
+    "scripts": ["resources/js/jquery/jquery-1.9.1.min.js", "resources/js/tnt/background.js"]
+  },
+
+  "permissions": [
+    "storage"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["http://136.166.96.136:8010/*", "http://136.166.96.136:8050/*","https://www.whatismybrowser.com/" ],
+      "js": ["resources/js/jquery/jquery-1.9.1.min.js", "resources/js/tnt/content.js"],
+      "css": ["resources/css/jira.css"]
+    }
+  ],
+
+  "web_accessible_resources": [
+    "resources/*"
+  ]
+}

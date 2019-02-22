@@ -1,0 +1,14 @@
+*Descrição:* 
+
+*Precondições:*
+ * Precondição 1
+
+*Dados de teste:*
+
+*Passos:*
+# Passo 1
+# Passo 2
+
+*Resultado esperado:*
+
+*Resultado atual:*

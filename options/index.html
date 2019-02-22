@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<script type="text/javascript" src="../resources/js/jquery/jquery-1.9.1.min.js" ></script>
+<script type="text/javascript" src="template.js" ></script>
+<head>
+  <title>Tools N Tools Options</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header"></div>
+    <div id="site_content">
+      <div id="content">
+        <fieldset>
+          <legend>Jira</legend>
+          <table class="options">
+              <tr>
+              <td colspan="2">
+                  <label><input type="checkbox" id="disableCreateBranch"> Disable Create branch link if issue status is Open or Resolved</label>
+                  </td>
+              </tr>
+              <tr>
+              <td colspan="2">
+                  <label><input type="checkbox" id="notifyNewOpenIssues"> Enable new open issues notification counter (below can be added the information needed)</label>
+              </td>
+              </tr>
+              <tr>
+              <td class="internal">
+                  <label>Jira User:<input type="text" id="jiraUser"/></label>
+              </td>
+              <td class="internal">
+                  <label>Jira Password:<input type="password" id="jiraPassword"/></label>
+              </td>
+              </tr>
+              <tr>
+              <td class="internal" colspan="2">
+                  <label>Jira Rest Api (ex: <i>http://136.166.96.136:8010/rest/api/2</i>): <input type="text" id="jiraRestApi"></label><br>
+              </td>
+              </tr>
+              <tr>
+              <td class="internal" colspan="2">
+                  <label>Jira Search Query (ex: <i>project = Beaver  AND status = Open</i>): <input type="text" id="jiraSearchQuery" style="width: 697px">
+                  <button id="btnSearch">Search</button> </label>
+              </td>
+              </tr>
+              <tr>
+              <td colspan="2">
+                  <label><input type="checkbox" id="addIssueDescriptionTemplates"> Add templates for issue description when creating issues (below can be added one custom template)</label>
+              </td>
+              </tr>
+              <tr>
+              <td class="internal" colspan="2">
+                  <label>Custom Template Name: <input type="text" id="customTemplateName"></label><br>
+              </td>
+              </tr>
+              <tr>
+              <td class="internal" colspan="2">
+                  <label>Custom Template Description: <textarea type="text" id="customTemplateDescription" rows="6"></textarea></label><br>
+              </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                    <label><input type="checkbox" id="checkChromeVersion"> Check if chrome is up to date when opening the browser</label>
+                </td>
+              </tr>
+          </table>
+      </fieldset>
+      <fieldset>
+          <legend>Stash</legend>
+          <table class="options">
+          <tr>
+              <td>
+                  <label><input type="checkbox" id="removeAutoPullRequestToDevelop"> Remove auto pull request to develop</label>
+              </td>
+          </tr>
+          </table>
+      </fieldset>
+      <div>
+          <button id="save" style="float:left; padding: 0px 5px 0px 5px; margin-right: 5px;">Save</button>
+          <div id="status" style="padding: 2px 0px 0px 0px;"></div>
+      </div>
+      <script type="text/javascript" src="options.js"></script>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </div>
+</body>
+</html>
