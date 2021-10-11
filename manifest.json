@@ -1,10 +1,10 @@
 {
   "name": "Tools N' Tools",
   "short_name": "TNT",
-  "version": "1.0.1",
+  "version": "1.0.6",
   "manifest_version": 2,
   "options_page": "options/index.html",
-  "description" : "Some tools to help development environment of Tools Team",
+  "description" : "Some software tools to help GREat/UFC Tools team to increase productivity on our development environment.",
   "icons": { "16": "resources/img/icons/16x16.png", "38": "resources/img/icons/38x38.png",
   "48": "resources/img/icons/48x48.png", "128": "resources/img/icons/128x128.png" },
 
@@ -24,8 +24,9 @@
 
   "content_scripts": [
     {
-      "matches": ["http://136.166.96.136:8010/*", "http://136.166.96.136:8050/*","https://www.whatismybrowser.com/" ],
-      "js": ["resources/js/jquery/jquery-1.9.1.min.js", "resources/js/tnt/content.js"],
+      "matches": [ "http://136.166.96.136:8010/*","http://200.129.43.196:8010/*","http://136.166.96.136:8050/*","http://200.129.43.196:8050/*", "https://www.whatismybrowser.com/","https://sso.lge.com/*",
+	  "http://otpauth.lge.com:8090/*","https://mlmdi.lge.com/*","https://otp.lge.com:9444/*" ],
+      "js": ["resources/js/jquery/jquery-1.9.1.min.js", "resources/js/captcha/tesseract.min.js", "resources/js/tnt/content.js"],
       "css": ["resources/css/jira.css"]
     }
   ],

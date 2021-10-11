@@ -1,5 +1,10 @@
 input
 {
-    width: 90px;
+    width: 100px;
     margin: 2px 0 1px 0;
+}
+
+input[type='text']
+{
+    width: 65px;
 }

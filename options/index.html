@@ -16,54 +16,44 @@
           <legend>Jira</legend>
           <table class="options">
               <tr>
-              <td colspan="2">
+              <td colspan="3">
                   <label><input type="checkbox" id="disableCreateBranch"> Disable Create branch link if issue status is Open or Resolved</label>
                   </td>
               </tr>
               <tr>
-              <td colspan="2">
-                  <label><input type="checkbox" id="notifyNewOpenIssues"> Enable new open issues notification counter (below can be added the information needed)</label>
+              <td colspan="3">
+                  <label><input type="checkbox" id="notifyNewOpenIssues"> Enable jira search issues notification counter (below can be added the information needed)</label>
               </td>
               </tr>
-              <tr>
+              <tr id="notifyNewOpenIssuesConfig">
               <td class="internal">
                   <label>Jira User:<input type="text" id="jiraUser"/></label>
               </td>
               <td class="internal">
                   <label>Jira Password:<input type="password" id="jiraPassword"/></label>
               </td>
-              </tr>
-              <tr>
-              <td class="internal" colspan="2">
-                  <label>Jira Rest Api (ex: <i>http://136.166.96.136:8010/rest/api/2</i>): <input type="text" id="jiraRestApi"></label><br>
+              <td class="internal">
+                <label>Jira Search Query (ex: <i>project = Beaver  AND status = Open</i>): </label>
+                <input type="text" id="jiraSearchQuery" style="width: 370px">
+                <button id="btnSearch">Search</button>
               </td>
               </tr>
               <tr>
-              <td class="internal" colspan="2">
-                  <label>Jira Search Query (ex: <i>project = Beaver  AND status = Open</i>): <input type="text" id="jiraSearchQuery" style="width: 697px">
-                  <button id="btnSearch">Search</button> </label>
-              </td>
-              </tr>
-              <tr>
-              <td colspan="2">
+              <td colspan="3">
                   <label><input type="checkbox" id="addIssueDescriptionTemplates"> Add templates for issue description when creating issues (below can be added one custom template)</label>
               </td>
               </tr>
-              <tr>
-              <td class="internal" colspan="2">
+              <tr class="issueTemplate">
+              <td class="internal" colspan="3">
                   <label>Custom Template Name: <input type="text" id="customTemplateName"></label><br>
               </td>
               </tr>
-              <tr>
-              <td class="internal" colspan="2">
+              <tr class="issueTemplate">
+              <td class="internal" colspan="3">
                   <label>Custom Template Description: <textarea type="text" id="customTemplateDescription" rows="6"></textarea></label><br>
               </td>
               </tr>
-              <tr>
-                <td colspan="2">
-                    <label><input type="checkbox" id="checkChromeVersion"> Check if chrome is up to date when opening the browser</label>
-                </td>
-              </tr>
+
           </table>
       </fieldset>
       <fieldset>
@@ -76,6 +66,35 @@
           </tr>
           </table>
       </fieldset>
+      <fieldset>
+        <legend>Miscellaneous</legend>
+            <table class="options">
+                <tr>
+                    <td colspan="4">
+                        <label><input type="checkbox" id="checkChromeVersion"> Check if chrome is up to date when opening the browser</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <label><input type="checkbox" id="autoLogger"> Enable automatic OTP request and logging  (below can be added the information needed)</label>
+                    </td>
+                </tr>
+                <tr id="autoLoggerConfig">
+                    <td class="internal">
+                        <label>Intranet User:<input type="text" id="otpUser"/></label>
+                    </td>
+                    <td class="internal">
+                        <label>Intranet Password:<input type="password" id="otpPassword"/></label>
+                    </td>
+                    <td class="internal">
+                        <label>Emp Number:<input type="text" id="otpEmpNumber"/></label>
+                    </td>
+                    <td class="internal">
+                        <label>Birthday:<input type="text" id="otpBirthday"/></label>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
       <div>
           <button id="save" style="float:left; padding: 0px 5px 0px 5px; margin-right: 5px;">Save</button>
           <div id="status" style="padding: 2px 0px 0px 0px;"></div>
